@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg'
+import logo from '../../../logo.svg'
 
 function Header() {
   return (
@@ -54,7 +54,21 @@ function Header() {
               <Link to="/"
                 className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
               >
+                Informes
+              </Link>
+            </li>
+            <li>
+              <Link to="/"
+                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              >
                 Venta
+              </Link>
+            </li>
+            <li>
+              <Link to="/"
+                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+              >
+                Ajustes
               </Link>
             </li>
           </ul>
