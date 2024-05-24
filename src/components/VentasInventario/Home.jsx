@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import Header from './assets/Header';
+import Navbar from './assets/Navbar';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -22,8 +24,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="sr-only">Productos</h2>
+      <Navbar />
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h1 className="text-wrap pb-8 text-xl font-bold">Productos</h1>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
@@ -36,6 +39,31 @@ export default function Home() {
             </a>
           ))}
         </div>
+        <nav class="flex justify-center">
+          <ul class="inline-flex -space-x-px text-base h-10 my-6">
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700">Previous</Link>
+            </li>
+            <li>
+              <Link to="#" aria-current="page"  class="flex items-center justify-center px-4 h-10 leading-tight text-red-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">1</Link>
+            </li>
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</Link>
+            </li>
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 text-gray-500 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700">3</Link>
+            </li>
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">4</Link>
+            </li>
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">5</Link>
+            </li>
+            <li>
+              <Link to="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700">Next</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </>
   );

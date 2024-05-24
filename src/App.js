@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/VentasInventario/Home";
-import Inventario from "./components/VentasInventario/inventario";
+import Inventario from "./components/VentasInventario/Inventario";
 import NotFound from "./components/NotFound"
 
 function App() {
